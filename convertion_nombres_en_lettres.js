@@ -125,11 +125,17 @@ return nombreEnLettres;
 // Solicitation du nombre à convertir en lettres et conversion en numérique
 while (proceed) {
 		nombre = parseInt((prompt("Entrez un nombre de 0 à 999")),10);
+		
+		if (!(isNaN(nombre))) {
+			if (nombre < 0 || nombre > 999) {
+			alert("Le nombre doit être compris entre 0 et 999");
+    		valid = false;
+			}
 		if (valid) {
 			convert(nombre);
     		alert("Le nombre " + nombre + " s'écrit en lettres: " + nombreEnLettres +".");   
 		}
-		else {
+        }else {
 			proceed = false;
 		}			
 }
