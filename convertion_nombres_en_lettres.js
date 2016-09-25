@@ -15,6 +15,14 @@ unite = nombre % 10;
 centaine = (nombre - (nombre % 100)) / 100;
 dizaine = (nombre - ((centaine * 100) + unite)) / 10;
 
+// traitement centaine = 0
+if (centaine === 0) {
+	nombreEnLettres = " "; 
+	if ((centaine + dizaine + unite) === 0) {
+		nombreEnLettres = "zero";
+	}
+}
+
 // traitement centaine = 1	
 if (centaine === 1){
 		nombreEnLettres = "cent";		
