@@ -33,6 +33,11 @@ if (centaine > 1) {
 		nombreEnLettres = tableauCentaineUnite[centaine - 1] + "-" + "cent";
 }
 
+// Ajout d'un "s" à cent
+if (centaine > 1 && dizaine === 0 && unite === 0) {
+		nombreEnLettres += "s";
+}
+
 // Ajout d'un "-" si centaine !== 0 
 if (centaine !==0 && (dizaine !== 0 || unite !== 0)) {
 		nombreEnLettres += "-";
